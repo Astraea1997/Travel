@@ -17,13 +17,22 @@ h1{font-size:clamp(28px,6vw,40px);letter-spacing:.06em;margin:10px 0 4px}.subtit
 .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:16px 0 10px}.timebox{border:1.5px solid var(--line);border-radius:15px;text-align:center;padding:10px 3px;background:#fff}.timebox:first-child{background:var(--yellow)}.num{font-size:27px;font-weight:700;font-variant-numeric:tabular-nums}.unit{font-size:11px;color:var(--muted)}
 .note{font-size:12px;color:var(--muted);margin:10px 0 18px}
 .content{padding:0 18px 24px}.panel{display:none}.panel.active{display:block}.section-title{font-size:20px;margin:22px 0 12px;display:flex;align-items:center;gap:9px}.section-title:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--pink);border:1px solid var(--line)}
-.card{background:#fffefa;border:1.5px solid var(--line);border-radius:18px;padding:15px;margin:10px 0;box-shadow:var(--shadow)}.card h3{font-size:16px;margin:0 0 8px}.muted{color:var(--muted);font-size:12px}.row{display:flex;justify-content:space-between;gap:12px;align-items:center}.pill{font-size:11px;border:1px solid var(--line);border-radius:20px;padding:4px 9px;background:#f7e4df;white-space:nowrap}
+.card{background:#fffefa;border:1.5px solid var(--line);border-radius:18px;padding:15px;margin:10px 0;box-shadow:var(--shadow)}.card h3{font-size:16px;margin:0 0 8px}.muted{color:var(--muted);font-size:12px;line-height:1.6}.row{display:flex;justify-content:space-between;gap:12px;align-items:center}.pill{font-size:11px;border:1px solid var(--line);border-radius:20px;padding:4px 9px;background:#f7e4df;white-space:nowrap}
 .flight{background:linear-gradient(120deg,#f5d4ca,#f8e5d7)}.flightline{display:flex;align-items:center;justify-content:space-between;margin:12px 0}.airport{font-size:24px;font-weight:700}.plane{font-size:22px}.details{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.detail{background:#f8f3e9;border-radius:12px;padding:10px;font-size:12px}.detail b{display:block;font-size:14px;margin-top:4px}
-.day{display:grid;grid-template-columns:54px 1fr;gap:12px}.date{background:var(--green);border:1.5px solid var(--line);border-radius:13px;text-align:center;padding:9px 3px;font-weight:700}.date small{display:block;font-size:10px;font-weight:400}.daybody{border-left:2px dashed #c9b9a8;padding:2px 0 15px 14px}.daybody h3{margin:0 0 6px;font-size:15px}.daybody p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}
-.stay{display:flex;gap:13px;align-items:center}.stayicon{width:62px;height:62px;flex:none;border-radius:14px;background:var(--blue);display:grid;place-items:center;font-size:28px;border:1px solid var(--line)}
-.memorygrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.memory{min-height:112px;border:1.5px dashed #b9aaa0;border-radius:15px;background:#faf6ee;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:12px;padding:12px}
+.day-card{background:#fffefa;border:1.5px solid var(--line);border-radius:18px;padding:15px;margin:14px 0;box-shadow:var(--shadow)}
+.day-header{display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1.5px dashed #d6cbc0;margin-bottom:12px}
+.date{background:var(--green);border:1.5px solid var(--line);border-radius:13px;text-align:center;padding:7px 10px;font-weight:700;min-width:56px}.date small{display:block;font-size:10px;font-weight:400}
+.day-title{margin:0;font-size:16px}.day-sub{margin:3px 0 0;font-size:12px;color:var(--muted)}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:flex;gap:10px;padding:6px 0;font-size:13px;line-height:1.5;border-bottom:1px solid #f2ece1}
+.timeline li:last-child{border-bottom:none}
+.time{font-weight:700;color:#6e655f;min-width:44px;font-variant-numeric:tabular-nums}
+.spot{flex:1}
+.tag-note{display:inline-block;background:#fff4d9;border:1px solid #d4b872;border-radius:6px;padding:1px 6px;font-size:11px;margin-left:4px;color:#5c4d26}
+.stay{display:flex;gap:13px;align-items:center}.stayicon{width:56px;height:56px;flex:none;border-radius:14px;background:var(--blue);display:grid;place-items:center;font-size:26px;border:1px solid var(--line)}
+.memorygrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.memory{min-height:112px;border:1.5px dashed #b9aaa0;border-radius:15px;background:#faf6ee;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:12px;padding:12px;line-height:1.6}
 footer{text-align:center;color:#9a9187;font-size:11px;padding:18px;border-top:1px solid #e7dfd4;letter-spacing:.08em}
-a{color:inherit} .edit-hint{background:#fff4d9;border-radius:12px;padding:12px;font-size:12px;line-height:1.7}
+a{color:inherit}
 @media(max-width:480px){body{background:var(--paper)}.page{margin:0;border:0;border-radius:0;box-shadow:none}.topnav{gap:2px;padding:12px 9px}.brand{font-size:11px}.tab{padding:7px 8px;font-size:11px}.hero{padding:13px 13px 0}.content{padding:0 13px 20px}.num{font-size:23px}}
 </style>
 </head>
@@ -75,70 +84,41 @@ a{color:inherit} .edit-hint{background:#fff4d9;border-radius:12px;padding:12px;f
   </section>
 
   <div class="content">
+    <!-- 首頁 -->
     <section class="panel active" id="home">
       <h2 class="section-title">旅程小提醒</h2>
-      <div class="card"><div class="row"><h3>✈ 出發日</h3><span class="pill">2026.12.10（四）</span></div><p class="muted">記得確認護照、機票、交通票券與住宿資料。</p></div>
-      <div class="card"><div class="row"><h3>♡ 旅行關鍵字</h3><span class="pill">冬日・散步・溫泉</span></div><p class="muted">把喜歡的風景、好吃的料理，以及一起旅行的日常都收藏起來。</p></div>
-      <div class="edit-hint">小小提示：這份網頁已經做好手機版排版。要修改航班、景點和住宿，打開檔案後找到最下方的「TRIP DATA」區塊即可。</div>
+      <div class="card">
+        <div class="row"><h3>✈ 出發集合</h3><span class="pill">2026.12.10（四）06:25</span></div>
+        <p class="muted">桃園機場第一航廈出發，直飛日本四國松山機場（MYJ），再搭高速船前往廣島。</p>
+      </div>
+      <div class="card">
+        <div class="row"><h3>♡ 旅行關鍵字</h3><span class="pill">7天 76個景點</span></div>
+        <p class="muted">廣島市區・宮島嚴島神社・道後溫泉本館・下灘海景車站・松山城・宇和島鯛魚飯・廣島燒・蜜柑甜點。</p>
+      </div>
+      <div class="card">
+        <div class="row"><h3>📌 行程重要備忘</h3><span class="pill">必看時間</span></div>
+        <p class="muted">
+          • <b>Day 1</b>：Pokémon Center Hiroshima 營業至 20:00。<br>
+          • <b>Day 4</b>：道後少爺列車一天僅三個時段（10:02、14:02、15:42）。<br>
+          • <b>購物優惠</b>：別忘了使用 Funliday 附帶的 BicCamera、唐吉訶德、松本清等日本折價券。
+        </p>
+      </div>
     </section>
 
+    <!-- 航班與交通 -->
     <section class="panel" id="flight">
-      <h2 class="section-title">航班資訊</h2>
-      <div class="card flight"><div class="row"><h3>去程・12/10（四）</h3><span class="pill">待填寫</span></div><div class="flightline"><div><div class="airport">TPE</div><div class="muted">桃園</div></div><div class="plane">✈ ───── ✈</div><div style="text-align:right"><div class="airport">目的地</div><div class="muted">日本</div></div></div><div class="details"><div class="detail">航空公司<b>請填寫</b></div><div class="detail">航班編號<b>請填寫</b></div><div class="detail">起飛時間<b>請填寫</b></div><div class="detail">抵達時間<b>請填寫</b></div></div></div>
-      <div class="card flight"><div class="row"><h3>回程・12/16（三）</h3><span class="pill">待填寫</span></div><div class="flightline"><div><div class="airport">日本</div><div class="muted">出發地</div></div><div class="plane">✈ ───── ✈</div><div style="text-align:right"><div class="airport">TPE</div><div class="muted">桃園</div></div></div><div class="details"><div class="detail">航空公司<b>請填寫</b></div><div class="detail">航班編號<b>請填寫</b></div><div class="detail">起飛時間<b>請填寫</b></div><div class="detail">抵達時間<b>請填寫</b></div></div></div>
-    </section>
+      <h2 class="section-title">航班與跨海交通</h2>
+      <div class="card flight">
+        <div class="row"><h3>去程航班</h3><span class="pill">2026.12.10（四）</span></div>
+        <div class="flightline">
+          <div><div class="airport">TPE</div><div class="muted">桃園第一航廈</div></div>
+          <div class="plane">✈ ───────</div>
+          <div style="text-align:right"><div class="airport">MYJ</div><div class="muted">愛媛松山機場</div></div>
+        </div>
+        <div class="details">
+          <div class="detail">集合/起飛時間<b>06:25 出發</b></div>
+          <div class="detail">預計抵達時間<b>09:45 抵達</b></div>
+        </div>
+      </div>
 
-    <section class="panel" id="plan">
-      <h2 class="section-title">每日旅行計畫</h2>
-      <div id="itinerary"></div>
-    </section>
-
-    <section class="panel" id="stay">
-      <h2 class="section-title">住宿收藏</h2>
-      <div class="card stay"><div class="stayicon">♨</div><div><h3>媛邸 ENTEI</h3><div class="muted">12/13 — 12/16　｜　愛媛・道後溫泉</div><div class="muted">2 位入住・非自駕</div></div></div>
-      <div class="card stay"><div class="stayicon">⌂</div><div><h3>前段住宿</h3><div class="muted">12/10 — 12/13　｜　請填寫飯店名稱</div><div class="muted">地址、入住時間、訂房編號可補在這裡</div></div></div>
-    </section>
-
-    <section class="panel" id="memory">
-      <h2 class="section-title">旅行回憶收藏</h2>
-      <p class="muted">把照片換成你們自己的旅程片段，讓這趟旅行有一個專屬的小角落。</p>
-      <div class="memorygrid"><div class="memory">📷<br>放上第一張照片</div><div class="memory">🍡<br>今天吃到的美味</div><div class="memory">🌿<br>最喜歡的風景</div><div class="memory">♡<br>想記住的小事</div></div>
-    </section>
-  </div>
-  <footer>MADE WITH LOVE · OUR LITTLE JOURNEY · 2026</footer>
-</main>
-<script>
-// ===== TRIP DATA：可自行修改的行程資料 =====
-const tripStart = "2026-12-10T00:00:00+08:00";
-const itinerary = [
-  {date:"12/10",weekday:"四",title:"出發日・抵達日本",desc:"填入航班、抵達後交通，以及第一晚住宿。"},
-  {date:"12/11",weekday:"五",title:"廣島散步日",desc:"填入景點、餐廳與移動方式。"},
-  {date:"12/12",weekday:"六",title:"廣島／周邊探索",desc:"填入當天想去的地方與備案。"},
-  {date:"12/13",weekday:"日",title:"移動至愛媛・入住媛邸",desc:"前往松山、道後溫泉，入住 ENTEI。"},
-  {date:"12/14",weekday:"一",title:"愛媛慢慢旅行",desc:"填入景點、甜點店與溫泉安排。"},
-  {date:"12/15",weekday:"二",title:"愛媛自由探索",desc:"留一點空白，享受旅行的步調。"},
-  {date:"12/16",weekday:"三",title:"回家日",desc:"退房、前往機場／車站，搭機返台。"}
-];
-document.getElementById("itinerary").innerHTML = itinerary.map(d =>
-  `<div class="day"><div class="date">${d.date}<small>星期${d.weekday}</small></div><div class="daybody"><h3>${d.title}</h3><p>${d.desc}</p></div></div>`
-).join("");
-
-function updateCountdown(){
-  const diff = new Date(tripStart).getTime() - Date.now();
-  if(diff <= 0){ document.getElementById("countdown-note").textContent="旅程開始了！祝你們一路順心 ♡"; ["days","hours","minutes","seconds"].forEach(id=>document.getElementById(id).textContent="0"); return; }
-  const d=Math.floor(diff/86400000), h=Math.floor(diff%86400000/3600000), m=Math.floor(diff%3600000/60000), s=Math.floor(diff%60000/1000);
-  document.getElementById("days").textContent=d;
-  document.getElementById("hours").textContent=String(h).padStart(2,"0");
-  document.getElementById("minutes").textContent=String(m).padStart(2,"0");
-  document.getElementById("seconds").textContent=String(s).padStart(2,"0");
-}
-updateCountdown(); setInterval(updateCountdown,1000);
-
-// 分頁切換
-document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>{
-  document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b===btn));
-  document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active",p.id===btn.dataset.tab));
-}));
-</script>
-</body>
-</html>
+      <div class="card">
